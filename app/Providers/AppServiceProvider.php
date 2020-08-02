@@ -8,6 +8,7 @@ use App\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(){
 
-
+	Schema::defaultStringLength(191);
         try {
             DB::connection()->getPdo();
 

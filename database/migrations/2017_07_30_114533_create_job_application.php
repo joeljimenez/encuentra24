@@ -14,7 +14,7 @@ class CreateJobApplication extends Migration
     public function up()
     {
         Schema::create('job_applications', function (Blueprint $table) {
-            $table->increments('id')->nullable();
+            $table->increments('id')->unique;
             $table->integer('ad_id')->nullable();
             $table->integer('job_id')->nullable();
             $table->integer('user_id')->nullable();
